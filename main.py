@@ -1,7 +1,6 @@
 
 class Kalkulator():
     def __init__(self):
-        self.historia = []
         pass
 
     def dodawanie(self,x,y):
