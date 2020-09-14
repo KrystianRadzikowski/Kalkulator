@@ -5,8 +5,8 @@ class Kalkulator():
         self.root = Tk()
         self.root.geometry('100x182')
         self.root.configure(background='#F0F8FF')
-
-        self.pole = Entry(self.root).grid(row=0,column=0,columnspan=4)
+        self.entry_text = StringVar()
+        self.pole = Entry(self.root, textvariable=self.entry_text).grid(row=0,column=0,columnspan=4)
         self.B7 = Button(self.root, text ="7", command = self.dodawanie, height = 2, width = 3).grid(row=1,column=0)
         self.B8 = Button(self.root, text ="8", command = self.dodawanie, height = 2, width = 3).grid(row=1,column=1)
         self.B9 = Button(self.root, text ="9", command = self.dodawanie, height = 2, width = 3).grid(row=1,column=2)
@@ -21,7 +21,7 @@ class Kalkulator():
         self.B1 = Button(self.root, text ="5", command = self.dodawanie, height = 2, width = 3).grid(row=3,column=0)
         self.B2 = Button(self.root, text ="6", command = self.dodawanie, height = 2, width = 3).grid(row=3,column=1)
         self.B3 = Button(self.root, text ="-", command = self.dodawanie, height = 2, width = 3).grid(row=3,column=2)
-        self.Bplus = Button(self.root, text ="+", command = self.dodawanie, height = 2, width = 3).grid(row=3,column=3)
+        self.Bplus = Button(self.root, text ="+", command = self.plus, height = 2, width = 3).grid(row=3,column=3)
         
         self.Bzamiana = Button(self.root, text ="±", command = self.dodawanie, height = 2, width = 3).grid(row=4,column=0)
         self.B0 = Button(self.root, text ="0", command = self.dodawanie, height = 2, width = 3).grid(row=4,column=1)
@@ -31,6 +31,12 @@ class Kalkulator():
         self.root.mainloop()
         pass
     def dodawanie(self):
+        pass
+    def plus(self):
+        self.entry_text.set(self.entry_text.get()+"+")
+        pass
+    def minus(self):
+        self.entry_text.set(self.entry_text.get()+"-")
         pass
 
 if __name__ == "__main__":
