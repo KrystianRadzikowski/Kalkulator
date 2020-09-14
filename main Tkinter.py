@@ -12,6 +12,7 @@ class Kalkulator():
         self.B9 = Button(self.root, text ="9", command = self.dodawanie, height = 2, width = 3).grid(row=1,column=2)
         self.Bx = Button(self.root, text ="x", command = self.dodawanie, height = 2, width = 3).grid(row=1,column=3)
         
+        
         self.B4 = Button(self.root, text ="4", command = self.dodawanie, height = 2, width = 3).grid(row=2,column=0)
         self.B5 = Button(self.root, text ="5", command = self.dodawanie, height = 2, width = 3).grid(row=2,column=1)
         self.B6 = Button(self.root, text ="6", command = self.dodawanie, height = 2, width = 3).grid(row=2,column=2)
